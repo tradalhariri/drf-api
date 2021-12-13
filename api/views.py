@@ -1,14 +1,14 @@
 from rest_framework import generics
-from posts.models import Post
-from .serializers import PostSerializer
+from items.models import Item
+from .serializers import ItemSerializer
 
 
-class PostAPIView(generics.ListCreateAPIView):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+class ItemAPIView(generics.ListCreateAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
     
-class PostDetailApiView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+class ItemDetailApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
 
 
